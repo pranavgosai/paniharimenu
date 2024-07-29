@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('StockCake-Feast\ of\ Flavors_1722171455.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color:  rgba(0, 0, 0, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.menu h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #ff9800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.menu img.logo {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.menu-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-section {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 300px;
+}
+
+.menu-section h2 {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #ff9800;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.menu-section h2 img.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.menu-section h2:hover {
+    color: #f39c12;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(110, 84, 49);
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    background-color: rgb(77, 58, 35);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.menu-item span {
+    flex: 1;
+}
+
+.menu-item .price {
+    font-weight: 600;
+    color: #ff9800;
+    text-shadow: 0 
+}
