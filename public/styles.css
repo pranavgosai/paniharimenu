@@ -13,7 +13,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px;
-    background-color:  rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
@@ -55,13 +55,6 @@ body {
     transition: color 0.3s;
 }
 
-.menu-section h2 img.icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
 .menu-section h2:hover {
     color: #f39c12;
 }
@@ -89,5 +82,69 @@ body {
 .menu-item .price {
     font-weight: 600;
     color: #ff9800;
-    text-shadow: 0 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .menu h1 {
+        font-size: 2em;
+    }
+
+    .menu-section h2 {
+        font-size: 1.5em;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item span {
+        margin-bottom: 5px;
+    }
+
+    .menu-item .price {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .menu {
+        padding: 20px;
+    }
+
+    .menu h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .menu img.logo {
+        max-width: 120px;
+    }
+
+    .menu-section {
+        margin: 0 5px;
+        min-width: 100%;
+    }
+
+    .menu-section h2 {
+        font-size: 1.2em;
+    }
+
+    .menu-item {
+        padding: 8px;
+    }
+
+    .menu-item span {
+        font-size: 0.9em;
+    }
+
+    .menu-item .price {
+        font-size: 1em;
+    }
 }
