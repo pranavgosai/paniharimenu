@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -23,13 +23,16 @@ body {
     margin-bottom: 30px;
     font-size: 2.5em;
     color: #ff9800;
+    font-weight: 700;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .menu img.logo {
     display: block;
     margin: 0 auto 20px;
-    max-width: 150px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
@@ -51,6 +54,8 @@ body {
     margin-bottom: 20px;
     font-size: 1.8em;
     color: #ff9800;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
     position: relative;
     transition: color 0.3s;
 }
@@ -67,6 +72,8 @@ body {
     background-color: rgb(110, 84, 49);
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .menu-item:hover {
@@ -77,10 +84,11 @@ body {
 
 .menu-item span {
     flex: 1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .menu-item .price {
-    font-weight: 600;
+    font-weight: 700;
     color: #ff9800;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -124,7 +132,8 @@ body {
     }
 
     .menu img.logo {
-        max-width: 120px;
+        max-width: 100%;
+        height: auto;
     }
 
     .menu-section {
