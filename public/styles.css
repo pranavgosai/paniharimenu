@@ -2,8 +2,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url("StockCake-Feast\ of\ Flavors_1722171455.jpg") no-repeat
-    center center fixed;
+  background: url("StockCake-Feast of Flavors_1722171455.jpg") no-repeat center
+    center fixed;
   background-size: cover;
   color: #ffffff;
   margin: 0;
@@ -99,28 +99,44 @@ body {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
+/* Styles for buttons */
+.button,
 .today-special {
   background-color: rgb(110, 84, 49);
-  font-weight: 700;
   color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  padding: 20px 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   font-size: 1em;
-  font-weight: 700;
-  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  width: 100%;
 }
 
+.button:hover,
+.today-special:hover {
+  background-color: rgb(77, 58, 35);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* New styles for mobile view */
 @media (max-width: 768px) {
   .menu-content {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .today-special {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-item span {
+    margin-bottom: 5px;
   }
 }
 
@@ -158,6 +174,7 @@ body {
 
   .menu-item span {
     font-size: 0.9em;
+    margin-bottom: 5px; /* Add margin between item name and price */
   }
 
   .menu-item .price {
