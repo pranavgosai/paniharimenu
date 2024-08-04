@@ -1,11 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+:root {
+  --primary-color: rgb(110, 84, 49);
+  --hover-color: rgb(77, 58, 35);
+  --accent-color: #ff9800;
+  --bg-color: rgba(0, 0, 0, 0.9);
+  --text-color: #ffffff;
+  --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url("StockCake-Feast of Flavors_1722171455.jpg") no-repeat center
-    center fixed;
+  background: url("StockCake-Feast of Flavors_1722171455.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #ffffff;
+  color: var(--text-color);
   margin: 0;
   padding: 20px;
 }
@@ -14,18 +21,9 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 30px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: var(--bg-color);
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-}
-
-.menu h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.5em;
-  color: #ff9800;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .menu img.logo {
@@ -35,160 +33,102 @@ body {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+a {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-shadow: var(--text-shadow);
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+}
+
+a:hover {
+  background-color: var(--hover-color);
+  transform: scale(1.05);
+  box-shadow: var(--shadow);
 }
 
 .menu-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-}
-
-.menu-items {
-  flex: 1;
 }
 
 .menu-section {
-  flex: 1;
-  margin: 0 10px;
-  min-width: 300px;
+  display: block; /* Always show sections */
+  width: 100%; /* Full width */
+  margin-bottom: 20px; /* Space between sections */
 }
 
 .menu-section h2 {
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-  font-size: 1.8em;
-  color: #ff9800;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  position: relative;
-  transition: color 0.3s;
-}
-
-.menu-section h2:hover {
-  color: #f39c12;
+  text-align: center; /* Center the heading */
+  margin-bottom: 10px;
+  color: var(--accent-color);
 }
 
 .menu-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Align text left and price right */
   margin-bottom: 10px;
   padding: 10px;
-  background-color: rgb(110, 84, 49);
+  background-color: var(--primary-color);
   border-radius: 8px;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-color);
+  width: 100%; /* Full width */
 }
 
 .menu-item:hover {
-  background-color: rgb(77, 58, 35);
+  background-color: var(--hover-color);
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow);
 }
 
 .menu-item span {
   flex: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--text-shadow);
 }
 
 .menu-item .price {
   font-weight: 700;
-  color: #ff9800;
+  color: var(--accent-color);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: right; /* Align price to the right */
 }
 
-/* Styles for buttons */
-.button,
-.today-special {
-  background-color: rgb(110, 84, 49);
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  margin-top: 20px;
-  width: 100%;
-}
-
-.button:hover,
-.today-special:hover {
-  background-color: rgb(77, 58, 35);
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* New styles for mobile view */
+/* Media Queries */
 @media (max-width: 768px) {
   .menu-content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  a {
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 10px;
   }
 
   .menu-item {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* Keep items in row format */
+    justify-content: space-between; /* Keep text on left and price on right */
   }
-
-  .menu-item span {
-    margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
-
-  .menu {
-    padding: 20px;
-  }
-
-  .menu h1 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-  }
-
-  .menu img.logo {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .menu-section {
-    margin: 0 5px;
-    min-width: 100%;
-  }
-
-  .menu-section h2 {
-    font-size: 1.2em;
-  }
-
-  .menu-item {
-    padding: 8px;
-  }
-
-  .menu-item span {
-    font-size: 0.9em;
-    margin-bottom: 5px; /* Add margin between item name and price */
-  }
-
-  .menu-item .price {
-    font-size: 1em;
-  }
-
-  .today-special {
-    padding: 8px 16px;
-    font-size: 0.9em;
-  }
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
