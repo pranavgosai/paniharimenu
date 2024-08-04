@@ -2,7 +2,7 @@
   --primary-color: rgb(110, 84, 49);
   --hover-color: rgb(77, 58, 35);
   --accent-color: #ff9800;
-  --bg-color: rgba(0, 0, 0, 0.9);
+  --bg-color: rgba(0, 0, 0, 0.857);
   --text-color: #ffffff;
   --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   --shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -117,18 +117,28 @@ a:hover {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  .menu-content {
-    flex-direction: column;
-    align-items: center;
+    .menu-content {
+      flex-direction: column;
+      align-items: center; /* Center align items */
+      width: 100%; /* Full width for mobile */
+    }
+  
+    a {
+      width: 100%; /* Full width for smaller screens */
+      margin-bottom: 10px;
+    }
+  
+    .menu-item {
+      flex-direction: row; /* Keep items in row format */
+      justify-content: space-between; /* Keep text on left and price on right */
+      width: 90%; /* Adjust width to make it more centered */
+      max-width: 500px; /* Optional: Set a max-width for larger screens */
+    }
+    
+    /* Optional: Center the menu-section heading */
+    .menu-section h2 {
+      text-align: center;
+      width: 100%; /* Ensure the heading takes full width */
+    }
   }
-
-  a {
-    width: 100%; /* Full width for smaller screens */
-    margin-bottom: 10px;
-  }
-
-  .menu-item {
-    flex-direction: row; /* Keep items in row format */
-    justify-content: space-between; /* Keep text on left and price on right */
-  }
-}
+  
