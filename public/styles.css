@@ -73,20 +73,20 @@ a:hover {
 }
 
 .menu-section {
-  display: block; /* Always show sections */
-  width: 100%; /* Full width */
-  margin-bottom: 20px; /* Space between sections */
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .menu-section h2 {
-  text-align: center; /* Center the heading */
+  text-align: center;
   margin-bottom: 10px;
   color: var(--accent-color);
 }
 
 .menu-item {
   display: flex;
-  justify-content: space-between; /* Align text left and price right */
+  justify-content: space-between;
   margin-bottom: 10px;
   padding: 10px;
   background-color: var(--primary-color);
@@ -94,7 +94,7 @@ a:hover {
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
   font-weight: 600;
   color: var(--text-color);
-  width: 100%; /* Full width */
+  width: 100%;
 }
 
 .menu-item:hover {
@@ -112,33 +112,37 @@ a:hover {
   font-weight: 700;
   color: var(--accent-color);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  text-align: right; /* Align price to the right */
+  text-align: right;
+}
+
+/* Scrollable content */
+.scrollable {
+  max-height: 500px; /* Adjust height as needed */
+  overflow-y: auto;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .menu-content {
-      flex-direction: column;
-      align-items: center; /* Center align items */
-      width: 100%; /* Full width for mobile */
-    }
-  
-    a {
-      width: 100%; /* Full width for smaller screens */
-      margin-bottom: 10px;
-    }
-  
-    .menu-item {
-      flex-direction: row; /* Keep items in row format */
-      justify-content: space-between; /* Keep text on left and price on right */
-      width: 90%; /* Adjust width to make it more centered */
-      max-width: 500px; /* Optional: Set a max-width for larger screens */
-    }
-    
-    /* Optional: Center the menu-section heading */
-    .menu-section h2 {
-      text-align: center;
-      width: 100%; /* Ensure the heading takes full width */
-    }
+  .menu-content {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
-  
+
+  a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .menu-item {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .menu-section h2 {
+    text-align: center;
+    width: 100%;
+  }
+}
